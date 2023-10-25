@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cervecería Artesanal</title>
+    
+    <!-- CDN bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    
+    <!-- link css -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    
+    <!-- nav-bar -->
+    <header class="container-fluid bg-dark position-sticky top-0">
+      <ul
+        class="nav nav-pills mb-3 py-3 container"
+        id="pills-tab"
+        role="tablist"
+      >
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link"
+            id="pills-home-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-home"
+            type="button"
+            role="tab"
+            aria-controls="pills-home"
+            aria-selected="true"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link active"
+            id="pills-profile-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-profile"
+            type="button"
+            role="tab"
+            aria-controls="pills-profile"
+            aria-selected="false"
+            >Productos</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link"
+            id="pills-contact-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-contact"
+            type="button"
+            role="tab"
+            aria-controls="pills-contact"
+            aria-selected="false"
+            >Carrito</a
+          >
+        </li>
+      </ul>
+    </header>
+
+    <!-- alert de añadir producto al carrito -->
+<div class="alert container position-sticky top-0 alert-primary hide" role="alert">
+producto añadido al carrito de compras!
+</div>
+
+<!-- alert de quitar producto del carrito -->
+<div class="alert container position-sticky top-0 alert-danger remove" role="alert">
+  producto eliminado del carrito de compras!
+  </div>
+
+
+
+    <!-- paginas -->
+    <div class="tab-content" id="pills-tabContent">
+      
+      <!-- contenido del home -->
+        <div
+        class="tab-pane fade"
+        id="pills-home"
+        role="tabpanel"
+        aria-labelledby="pills-home-tab"
+        tabindex="0"
+      >
+        
+<!-- carousel -->
+
+<div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/brindis-1024x1024.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/sirviendo-1024x1024.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/beer.webp" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+
+
+      </div>
+
+      <!--productos -->
+      <div
+        class="tab-pane fade show active container"
+        id="pills-profile"
+        role="tabpanel"
+        aria-labelledby="pills-profile-tab"
+        tabindex="0"
+      >
+      <!-- título productos -->
+      <h2 class="h4 m-4 text-primary">Nuestras Cervezas</h2>
+
+      <!-- contenido productos -->
+      <div class="row row-cols-sm1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+
+        <!-- card cerveza golden -->
+      <div class="col d-flex justify-content-center mb-4">
+          <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-primary">Golden</h5>
+              <img src="img/cervezas_productos/golden--.jpg" class="card-img-top" alt="...">
+              <div class="card-body ">
+                <p class="card-text text-white-50 description">Tiene un agradable color dorado, amargor liviano, carbonatación media-alta.</p>
+                <h5 class="text-primary">precio: <span class="precio">$ 1000</span></h5>
+                <div class="d-grid gap-2">
+                <button class="btn btn-primary button">Agregar al Carrito</button>
+                </div>
+              </div>
+            </div>
+      </div>
+      
+      <!-- card cerveza ipa -->
+      <div class="col d-flex justify-content-center mb-4">
+        <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+            <h5 class="card-title pt-2 text-center text-primary">Ipa</h5>
+            <img src="img/cervezas_productos/ipa.jpg" class="card-img-top" alt="...">
+            <div class="card-body ">
+              <p class="card-text text-white-50 description">Cuenta con una mayor cantidad de lúpulo, amargor y aroma intenso.</p>
+              <h5 class="text-primary">precio: <span class="precio">$ 1200</span></h5>
+              <div class="d-grid gap-2">
+              <button class="btn btn-primary button">Agregar al Carrito</button>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <!-- card cerveza roja -->
+    <div class="col d-flex justify-content-center mb-4">
+      <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+          <h5 class="card-title pt-2 text-center text-primary">Roja</h5>
+          <img src="img/cervezas_productos/roja--.jpg" class="card-img-top" alt="...">
+          <div class="card-body ">
+            <p class="card-text text-white-50 description">Aroma a caramelo con suaves notas a lúpulo, leve sabor a granos tostados.</p>
+            <h5 class="text-primary">precio: <span class="precio">$ 1200</span></h5>
+            <div class="d-grid gap-2">
+            <button class="btn btn-primary button">Agregar al Carrito</button>
+            </div>
+          </div>
+        </div>
+  </div>
+
+  <!-- card cerveza apa -->
+  <div class="col d-flex justify-content-center mb-4">
+    <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+        <h5 class="card-title pt-2 text-center text-primary">Apa</h5>
+        <img src="img/cervezas_productos/apa--.jpg"card-img-top" alt="...">
+        <div class="card-body ">
+          <p class="card-text text-white-50 description">Fuerte aroma a lúpulo con un rango posible cítricas, florares y frutas tropicales.</p>
+          <h5 class="text-primary">precio: <span class="precio">$ 1200</span></h5>
+          <div class="d-grid gap-2">
+          <button class="btn btn-primary button">Agregar al Carrito</button>
+          </div>
+        </div>
+      </div>
+</div>
+
+<!-- card cerveza stout -->
+<div class="col d-flex justify-content-center mb-4">
+  <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+      <h5 class="card-title pt-2 text-center text-primary">Stout</h5>
+      <img src="img/cervezas_productos/negra.jpg" class="card-img-top" alt="...">
+      <div class="card-body ">
+        <p class="card-text text-white-50 description">Oscura y ligera, su sabor predomina el dulce de las maltas de final amargo.</p>
+        <h5 class="text-primary">precio: <span class="precio">$ 1500</span></h5>
+        <div class="d-grid gap-2">
+        <button class="btn btn-primary button">Agregar al Carrito</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- card cerveza doble ipa -->
+<div class="col d-flex justify-content-center mb-4">
+<div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+    <h5 class="card-title pt-2 text-center text-primary">Doble Ipa</h5>
+    <img src="img/cervezas_productos/dolble ipa.jpg" class="card-img-top" alt="...">
+    <div class="card-body ">
+      <p class="card-text text-white-50 description">intensa lupulada, sabor fuerte y amarga de sulzor residual y cuerpo de American Barleywine.</p>
+      <h5 class="text-primary">precio: <span class="precio">$ 1400</span></h5>
+      <div class="d-grid gap-2">
+      <button class="btn btn-primary button">Agregar al Carrito</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- card cerveza doble apa -->
+<div class="col d-flex justify-content-center mb-4">
+<div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+    <h5 class="card-title pt-2 text-center text-primary">Doble Apa</h5>
+    <img src="img/cervezas_productos/doble-apa.jpg" class="card-img-top" alt="...">
+    <div class="card-body "> 
+      <p class="card-text text-white-50 description">Mas cantidad de malta y lúpulo que una IPA normal, sabor intenso frutas y cítricos.</p>
+      <h5 class="text-primary">precio: <span class="precio">$ 1400</span></h5>
+      <div class="d-grid gap-2">
+      <button class="btn btn-primary button">Agregar al Carrito</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+      </div>
+      
+      <!-- contenido del carrito -->
+      <div
+        class="tab-pane fade carrito"
+        id="pills-contact"
+        role="tabpanel"
+        aria-labelledby="pills-contact-tab"
+        tabindex="0"
+      >
+      <!-- carrito -->
+      <br>
+      <table class="table table-dark table-sm"">
+        <thead>
+          <tr class="text-primary">
+            <th scope="col">#</th>
+            <th scope="col">Productos</th>
+            <th scope="col">Precios</th>
+            <th scope="col">Cantidad</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider" class="tbody" >
+         
+          <!-- descripción de compra -->
+          <tr>
+            
+          </tr>
+         
+        </tbody>
+      </table>
+
+      <br><br>
+
+      <div class="row mx-4">
+        <div class="col">
+          <h3 class="itemCartTotal text-white">total: 0</h3>
+          <div class="col d-flex justify-content-end">
+            <button class="btn btn-success">COMPRAR</button>
+          </div>
+        </div>
+      </div>
+
+
+      </div>
+    </div>
+
+
+    <footer class="bg-dark p-3 mt-5">
+      <p class="text-center m-0 text-white">Cervecería Artesanal | Buenos Aires</p>
+    </footer>
+    
+    <!-- script jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    
+    <!-- script bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+   
+    <!-- script -->
+    <script src="js/script.js"></script>
+    <script src="js/producs.js"></script>
+  </body>
+</html>
